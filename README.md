@@ -1,6 +1,6 @@
 # webshell | [English](https://github.com/tennc/webshell/blob/master/README_EN.md)  | [Türkiye](https://github.com/tennc/webshell/blob/master/README_TR.md)
 
-![AHAHAHHAHAHAHAHHAHAHAHA]([https://github.com](https://github.com/bttst/wso-5.0.0/blob/master/preview.png))
+![AHAHAHHAHAHAHAHHAHAHAHA](https://github.com/bttst/wso-5.0.0/blob/master/preview.png)
 
 这是一个webshell收集项目
 
